@@ -1,7 +1,14 @@
 const karyawanController=require('./karyawanControllers')
-const productController=require('./productControllers')
+const productControllers=require('./productControllers')
+const authController=require('./authControllers')
+const productController=require('./productController')
+const mongoController=require('./mongocontrollers')
+
 
 module.exports={
     karyawanController,
-    productController
+    productControllers,
+    authController,
+    productController,
+    mongoController
 }

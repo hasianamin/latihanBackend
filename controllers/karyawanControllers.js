@@ -2,10 +2,21 @@ const {db}=require('./../connection')
 
 module.exports={
     getKaryawan:(req,res)=>{
-        db.query('select * from karyawan',(err,result)=>{
-            if(err)return res.send(err)
-            else res.send(result)
-        })
+        var {page}=req.query
+        var sql
+        if(page){
+            page=parseInt(page)
+            sql=`select * from karyawan limit ${(page-1)*5},5`
+            db.query(sql,(err,result)=>{
+                if(err)return res.send(err)
+                else res.send(result)
+            })
+        }else{
+            db.query('select * from karyawan',(err,result)=>{
+                if(err)return res.send(err)
+                else res.send(result)
+            })
+        }
     },
     getKaryawanById:(req,res)=>{
         var query = 'select * from karyawan where no=?'

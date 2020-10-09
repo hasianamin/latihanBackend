@@ -1,14 +1,14 @@
 const { insertKaryawan } = require('../controllers/karyawanControllers')
 
 const Router=require('express').Router()
-const {productController}=require('./../controllers')
+const {productControllers}=require('./../controllers')
 
-Router.post('/',productController.addProducts)
+Router.post('/',productControllers.addProducts)
 
-Router.put('/:id',productController.editProductById)
+Router.put('/:id',productControllers.editProductById)
 
-Router.delete('/:id',productController.deleteProductById)
+Router.delete('/:id',productControllers.deleteProductById)
 
-Router.get('/',productController.filterProduct)
+Router.get('/',productControllers.filterProduct)
 
 module.exports=Router
