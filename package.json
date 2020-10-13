@@ -17,8 +17,10 @@
     "handlebars": "^4.7.6",
     "jsonwebtoken": "^8.5.1",
     "mongodb": "^3.6.2",
+    "mongoose": "^5.10.9",
     "multer": "^1.4.2",
     "mysql": "github:mysqljs/mysql",
-    "nodemailer": "^6.4.13"
+    "nodemailer": "^6.4.13",
+    "socket.io": "^2.3.0"
   }
 }
